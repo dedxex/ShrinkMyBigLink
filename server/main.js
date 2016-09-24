@@ -6,7 +6,7 @@ import ConnectRoute from 'connect-route';
 function handleRoute(req,res,next) {
     const link = Links.findOne( { token : req.params.randomNumber } );
     if(link) {
-        Links.update( { $inc : { clicks : 1 }  });
+        Links.update( link,{ $inc : { 'clicks' : 1 }  });
         res.writeHead(307, { 'Location' : link.url });
         res.end();
     }

@@ -27,7 +27,7 @@ class LinkCreate extends Component{
                     <div className="form-group">
                         <input ref="link" className="form-control" placeholder={this.state.errors} />
                     </div>
-                        <button className="btn btn-default">create</button>
+                        <button className="btn btn-primary">create</button>
                 </form></div>
             
         );
